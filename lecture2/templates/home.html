@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+
+
+{% block content %}
+    <h1>HomePage</h1>
+
+    <p>Welcome to the Learning Flask course!</p>
+
+    <h1>User</h1>
+    <p>Name : {{context.user.name}}</p>
+    <p>Age : {{context.user.age}}</p>
+    <p>Phone : {{context.user.phone}}</p>
+
+    <b>Things I learnt</b>
+    <ul>
+        {% for item in context.progress %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
